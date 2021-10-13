@@ -1,5 +1,5 @@
 <template>
   <div>
-    <NuxtPage/>
+    产品详情
   </div>
 </template>
