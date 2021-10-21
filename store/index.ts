@@ -4,7 +4,7 @@ import useCommon from './modules/useCommon'; // 公共缓存
 const storeLocalKey = "nuxt3-demo";
 
 const Store = {
-  common: useCommon
+  useCommon
 }
 
 const initStoreStorage = () => {
@@ -16,7 +16,7 @@ const initStoreStorage = () => {
       storeInstance.$patch({...l[key]});
     }
     storeInstance.$subscribe((_, state) => {
-      l[_.storeId] = state;
+      l[key] = state;
       localStorage.setItem(storeLocalKey, JSON.stringify(l));
     });
   }
@@ -25,6 +25,4 @@ const initStoreStorage = () => {
 process.client && initStoreStorage();
 
 
-export {
-  useCommon
-}
+export default Store;
