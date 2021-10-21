@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia';
-// import { KEY_SETTING } from '@/store/key';
 
 interface commonStore {
   count: number;

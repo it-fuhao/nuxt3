@@ -1,12 +1,17 @@
 
-import useCommon from './modules/useCommon'; // 公共缓存
+import useCommon from './modules/useCommon'; // 公共模块
+import useProduct from './modules/useProduct'; // 产品模块
 
+// 存储key
 const storeLocalKey = "nuxt3-demo";
 
+// 模块缓存统一包一层，方便持久化存储
 const Store = {
-  useCommon
+  useCommon,
+  useProduct
 }
 
+// 持久化存储
 const initStoreStorage = () => {
   const local = localStorage.getItem(storeLocalKey) ?? "{}";
   const l = JSON.parse(local);
