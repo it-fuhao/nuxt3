@@ -5,7 +5,7 @@
   </div>
 </template>
 <script lang="ts">
-import { useRouter } from 'vue-router';
+// import { useRouter } from 'vue-router';
 export default defineNuxtComponent({
   layout: 'custom', // 使用layouts布局
   head() {
@@ -13,11 +13,14 @@ export default defineNuxtComponent({
       title: "nuxt3 demo 首页",
     }
   },
+  asyncData() {
+    console.log(process);
+  },
   setup() {
-    const router = useRouter();
+    // const router = useRouter();
     // 路由跳转
     const handleRouter = () => {
-      router.push({ name: 'product' });
+      // router.push({ name: 'product' });
     }
     return {
       handleRouter
