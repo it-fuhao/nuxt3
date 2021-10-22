@@ -2,6 +2,7 @@
   <div class="page">
     <van-collapse v-model="activeNames" class="index">
       <van-collapse-item title="路由跳转" name="1">
+        <!-- {{ userInfo }} -->
         <!-- <van-button type="primary" @click="goToProductList">跳转页面</van-button> -->
       </van-collapse-item>
       <van-collapse-item title="pinia状态管理" name="2">
@@ -22,30 +23,30 @@
     </van-collapse>
   </div>
 </template>
-<script setup lang="ts">
-import { ref, reactive, computed } from 'vue';
+<script setup lang='ts'>
 import { Toast } from 'vant';
-// import { getUserInfo } from '@/server/api/common';
+import { getUserInfo } from '@/server/api/common';
 import Store from '@/store/index';
-const userInfo = reactive({});
+
 const activeNames = ref(['1', '2', '3']);
-// const router = useRouter();
+
 // 查询用户信息
+let userInfo = reactive({name: ''});
 const handleUserInfo = async () => {
-  // router.push({ name: 'product' });
-  // userInfo.name = "张三";
-  // const userInfoRes = await getUserInfo({
-  //   channelType: '1',
-  //   saleCode: 'MY_*0mS5C7hu9MJgPKPi38bIBtqcIYuReeCK9sOtWGhThR6k!'
-  // })
-  // const res = await $axios.$post({
-  //   url: '/apigateway/api/user/getUserInfo',
-  //   data: {
-  //     channelType: '1',
-  //     saleCode: 'MY_*0mS5C7hu9MJgPKPi38bIBtqcIYuReeCK9sOtWGhThR6k!'
-  //   }
-  // })
-  // userInfo = res
+  let res;
+  Toast.loading('等待修改状态');
+  try {
+    res = await getUserInfo({
+      channelType: '1',
+      saleCode: 'MY_*0mS5C7hu9MJgPKPi38bIBtqcIYuReeCK9sOtWGhThR6k!'
+    })
+  } catch (error) {
+    Toast.fail({message: error.message});
+    return;
+  } finally {
+    Toast.clear();
+  }
+  userInfo.name = res.data.name;
 }
 // console.log(process);
 
@@ -70,6 +71,19 @@ const changeCountAsync = async () => {
 const changeProductId = () => {
   productStore.changeProductId(productStore.productId - 1);
 }
+
+// const { data: userInfo } = await useFetch("/apigateway/api/user/getUserInfo", {
+//   method: "post",
+//   body: {
+//     channelType: '1',
+//     saleCode: 'MY_*0mS5C7hu9MJgPKPi38bIBtqcIYuReeCK9sOtWGhThR6k!'
+//   },
+//   headers: {
+//     fuckdes: "true"
+//   }
+// })
+
+// console.log(userInfo.value);
 </script>
 
 <style lang='scss' scoped>

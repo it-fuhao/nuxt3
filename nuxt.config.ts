@@ -14,11 +14,6 @@ export default defineNuxtConfig({
       { src: "/js/rem.js"},
     ],
   },
-  // buildDir: "/project/.nuxt",
-  axios: {
-    proxy: true, // 表示开启代理
-    // prefix: '/api', // 表示给请求url加个前缀 /api
-  },
   proxy: {
     '/apigateway': {
       target: serverUrl,
@@ -27,27 +22,16 @@ export default defineNuxtConfig({
     }
   },
   modules: [
-    // '@nuxtjs/axios', // TODO nuxt3集成axios 引发报错
+    '@nuxtjs/proxy'
   ],
   buildModules: [
-    // pinia plugin - https://pinia.esm.dev
     '@pinia/nuxt',
   ],
   plugins: [
 
   ],
   css: [
-    /**
-     * default alisa
-     * "~~": "/project"
-     * "@@": "/project"
-     * "~": "/project"
-     * "@": "/project"
-     * "assets": "/project/assets"
-     * "public": "/project"
-     */
     "@/assets/styles/common.scss",
-    // "vant/lib/index.scss",
   ],
   loading: {
     color: "#59cc93"

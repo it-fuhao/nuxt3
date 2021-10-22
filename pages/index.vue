@@ -1,11 +1,10 @@
 <template>
   <div>
     这是主体内容
-    <van-button type="primary" @click="handleRouter">跳转产品详情</van-button>
+    <van-button type="primary" @click="handleRouter">跳转</van-button>
   </div>
 </template>
 <script lang="ts">
-// import { useRouter } from 'vue-router';
 export default defineNuxtComponent({
   layout: 'custom', // 使用layouts布局
   head() {
@@ -17,10 +16,10 @@ export default defineNuxtComponent({
     console.log(process);
   },
   setup() {
-    // const router = useRouter();
+    const router = useRouter();
     // 路由跳转
     const handleRouter = () => {
-      // router.push({ name: 'product' });
+      router.push({ name: 'test' });
     }
     return {
       handleRouter

@@ -1,12 +1,10 @@
-import request from '../request'
+import myFetch from '../request'
+import { UserParamsModel, UserInfoModel } from './model/commonModel'
 
-/**
- * 获取用户信息
- */
-export function getUserInfo(data: {}) {
-  return request({
+export const getUserInfo = async (params: UserParamsModel) => {
+  return await myFetch.fetch({
     url: '/apigateway/api/user/getUserInfo',
     method: 'post',
-    data: data,
+    body: params
   })
 }
