@@ -43,9 +43,8 @@ const handleUserInfo = async () => {
   } catch (error) {
     Toast.fail({message: error.message});
     return;
-  } finally {
-    Toast.clear();
-  }
+  } 
+  Toast.clear();
   userInfo.name = res.data.name;
 }
 // console.log(process);

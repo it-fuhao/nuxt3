@@ -1,10 +1,10 @@
 import { defineNuxtPlugin } from '#app'
 import Vant from 'vant'
 
-export default defineNuxtPlugin(async (nuxt: any) => {
+export default defineNuxtPlugin((nuxtApp: any) => {
   
-  const { app } = nuxt
+  const { vueApp } = nuxtApp;
 
-  app.use(Vant)
+  vueApp.use(Vant);
 
 })

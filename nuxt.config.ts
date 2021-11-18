@@ -31,12 +31,14 @@ export default defineNuxtConfig({
 
   ],
   css: [
+    "@/assets/styles/base.scss",
     "@/assets/styles/common.scss",
   ],
   loading: {
     color: "#59cc93"
   },
   build: {
+    transpile: ['vant'],
     extractCSS: true,
     postcss: {
       postcssOptions: {

@@ -1,25 +1,24 @@
 {
   "private": true,
   "scripts": {
-    "dev": "nuxt dev",
-    "build": "nuxt build",
-    "start": "node .output/server",
-    "postinstall": "yarn upgrade"
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
-    "autoprefixer": "10.3.7",
-    "node-sass": "6.0.1",
-    "nuxt3": "3.0.0-27242401.39ed77e",
-    "postcss-pxtorem": "6.0.0",
-    "sass": "1.43.2",
-    "sass-loader": "12.2.0"
+    "node-sass": "^6.0.1",
+    "nuxt3": "latest",
+    "postcss-pxtorem": "^6.0.0",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.3.0"
   },
   "dependencies": {
-    "@nuxtjs/axios": "5.13.6",
+    "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/proxy": "^2.1.0",
-    "@pinia/nuxt": "0.0.6",
-    "ohmyfetch": "^0.3.1",
-    "pinia": "2.0.0-rc.13",
+    "@pinia/nuxt": "^0.1.5",
+    "autoprefixer": "^10.4.0",
+    "ohmyfetch": "^0.4.6",
+    "pinia": "^2.0.3",
     "vant": "3.2.5"
   }
 }
