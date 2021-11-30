@@ -19,6 +19,6 @@
     "autoprefixer": "^10.4.0",
     "ohmyfetch": "^0.4.6",
     "pinia": "^2.0.3",
-    "vant": "3.2.5"
+    "vant": "^3.2.5"
   }
 }

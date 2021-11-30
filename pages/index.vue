@@ -13,7 +13,7 @@ export default defineNuxtComponent({
     }
   },
   asyncData() {
-    console.log(process);
+    // console.log(process);
   },
   setup() {
     const router = useRouter();
