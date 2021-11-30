@@ -18,9 +18,9 @@ const commonOptions = {
           this.count++;
           resolve(true);
         }, 3000);
-      })
-    }
+      });
+    },
   },
-}
+};
 
 export default defineStore(commonOptions);

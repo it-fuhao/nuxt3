@@ -1,10 +1,10 @@
-import myFetch from '../request'
-import { UserParamsModel, UserInfoModel } from './model/commonModel'
+import myFetch from '../request';
+import { IUserParams } from './model/common.interface';
 
-export const getUserInfo = async (params: UserParamsModel) => {
+export const getUserInfo = async (params: IUserParams) => {
   return await myFetch.fetch({
     url: '/apigateway/api/user/getUserInfo',
     method: 'post',
-    body: params
-  })
-}
+    body: params,
+  });
+};

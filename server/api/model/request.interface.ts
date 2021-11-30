@@ -1,5 +1,3 @@
-
-
 export interface RequestType {
   url: string;
   method: string;
@@ -11,5 +9,5 @@ export interface RequestType {
 export interface ResponseType<T = any> {
   code: string;
   msg: string;
-  data: T
+  data: T;
 }
