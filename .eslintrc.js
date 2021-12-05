@@ -1,4 +1,4 @@
-{
+module.exports = {
   "root": true,
   "env": {
     "browser": true,
@@ -9,7 +9,14 @@
     "parser": "@babel/eslint-parser",
     "sourceType": "module"
   },
-  "extends": ["@nuxtjs/eslint-config-typescript", "prettier", "plugin:prettier/recommended"],
+  "extends": [
+    '@nuxtjs',
+    '@nuxtjs/eslint-config-typescript',
+    'prettier',
+    'prettier/vue',
+    'plugin:prettier/recommended',
+    'plugin:nuxt/recommended'
+  ],
   "plugins": ["prettier"],
   "rules": {
     "quotes": [1, "single"],
