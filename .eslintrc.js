@@ -13,11 +13,8 @@ module.exports = {
   "extends": [
     '@nuxtjs',
     '@nuxtjs/eslint-config-typescript',
-    'prettier',
-    'plugin:prettier/recommended',
     'plugin:nuxt/recommended'
   ],
-  "plugins": ["prettier"],
   "rules": {
     "quotes": [1, "single"],
     "semi": [1, "always"],
