@@ -35,7 +35,7 @@
     semver "^6.3.0"
     source-map "^0.5.0"
 
-"@babel/eslint-parser@^7.12.16":
+"@babel/eslint-parser@^7.12.16", "@babel/eslint-parser@^7.16.3":
   version "7.16.3"
   resolved "https://registry.npmmirror.com/@babel/eslint-parser/download/@babel/eslint-parser-7.16.3.tgz#2a6b1702f3f5aea48e00cea5a5bcc241c437e459"
   integrity sha512-iB4ElZT0jAt7PKVaeVulOECdGe6UnmA/O0P9jlF5g5GBOwDVbna8AXhHRu4s27xQf6OkveyA8iTDv1jHdDejgQ==
@@ -6767,6 +6767,11 @@ type-fest@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npmmirror.com/type-fest/download/type-fest-1.4.0.tgz?cache=0&sync_timestamp=1637149946417&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Ftype-fest%2Fdownload%2Ftype-fest-1.4.0.tgz#e9fb813fe3bf1744ec359d55d1affefa76f14be1"
   integrity sha1-6fuBP+O/F0TsNZ1V0a/++nbxS+E=
+
+typescript@^4.5.2:
+  version "4.5.2"
+  resolved "https://registry.npmmirror.com/typescript/download/typescript-4.5.2.tgz#8ac1fba9f52256fdb06fb89e4122fa6a346c2998"
+  integrity sha512-5BlMof9H1yGt0P8/WF+wPNw6GfctgGjXp5hkblpyT+8rkASSmkUKMXrxR0Xg8ThVCi/JnHQiKXeBaEwCeQwMFw==
 
 ufo@^0.7.9:
   version "0.7.9"

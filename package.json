@@ -7,6 +7,7 @@
     "lint": "eslint . --ext .vue,.ts,.js"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.16.3",
     "@nuxtjs/eslint-config-typescript": "^7.0.2",
     "eslint": "^8.3.0",
     "eslint-config-prettier": "^8.3.0",
@@ -27,6 +28,7 @@
     "autoprefixer": "^10.4.0",
     "ohmyfetch": "^0.4.6",
     "pinia": "^2.0.3",
+    "typescript": "^4.5.2",
     "vant": "^3.2.5"
   },
   "gitHooks": {
@@ -34,7 +36,8 @@
   },
   "lint-staged": {
     "*.{js,ts,vue}": [
-      "yarn run lint"
+      "yarn run lint",
+      "git add"
     ]
   }
 }
