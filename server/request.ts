@@ -5,7 +5,6 @@ class MyFetch {
   baseOptions = {
     headers: {
       'Content-Type': 'application/json',
-      fuckdes: true
     }
   };
 
