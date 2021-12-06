@@ -17,7 +17,7 @@ export default defineNuxtComponent({
   },
   setup() {
     const router = useRouter();
-    const aaa = '1234';
+    const aaaa = '12345';
     // 路由跳转
     const handleRouter = () => {
       router.push({ name: 'test' });
