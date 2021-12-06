@@ -11,6 +11,7 @@
     "@nuxtjs/eslint-config-typescript": "^7.0.2",
     "eslint": "^8.3.0",
     "eslint-plugin-nuxt": "^3.1.0",
+    "husky": "^7.0.4",
     "lint-staged": "^12.1.2",
     "node-sass": "^6.0.1",
     "nuxt3": "latest",
@@ -28,8 +29,10 @@
     "typescript": "^4.5.2",
     "vant": "^3.2.5"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.{js,ts,vue}": [
