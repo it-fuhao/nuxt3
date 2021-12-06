@@ -7,14 +7,14 @@ const storeLocalKey = 'nuxt3-demo';
 // 模块缓存统一包一层，方便持久化存储
 const Store = {
   useCommon,
-  useProduct,
+  useProduct
 };
 
 // 持久化存储
 const initStoreStorage = () => {
   const local = localStorage.getItem(storeLocalKey) ?? '{}';
   const l = JSON.parse(local);
-  for (let key in Store) {
+  for (const key in Store) {
     const storeInstance = Store[key]();
     if (l[key]) {
       storeInstance.$patch({ ...l[key] });

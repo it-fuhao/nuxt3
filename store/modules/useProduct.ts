@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 
-interface productStore {
+export interface productStore {
   productId: string;
 }
 const productOptions = {

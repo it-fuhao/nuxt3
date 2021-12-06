@@ -9,7 +9,7 @@ export default defineNuxtComponent({
   layout: 'custom', // 使用layouts布局
   head() {
     return {
-      title: 'nuxt3 demo 首页',
+      title: 'nuxt3 demo 首页'
     };
   },
   asyncData() {
@@ -17,14 +17,13 @@ export default defineNuxtComponent({
   },
   setup() {
     const router = useRouter();
-    const aaa = "1234";
     // 路由跳转
     const handleRouter = () => {
       router.push({ name: 'test' });
     };
     return {
-      handleRouter,
+      handleRouter
     };
-  },
+  }
 });
 </script>

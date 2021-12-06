@@ -4,7 +4,7 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "node .output/server/index.mjs",
-    "lint": "eslint . --ext .vue,.ts,.js"
+    "lint": "eslint . --ext .vue,.ts,.js --fix"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.3",
