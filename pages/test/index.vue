@@ -9,16 +9,26 @@
         <van-collapse-item title="pinia状态管理" name="2">
           <p>这是pinia/common模块中的count: {{ commonStore.count }}</p>
           <p>这是pinia/product模块中的productId: {{ productStore.productId }}</p>
-          <p><input type="text" v-model="commonStore.count" /></p>
+          <p><input v-model="commonStore.count" type="text"></p>
           <p>支持持久化，刷新页面查看效果</p>
-          <van-button type="primary" @click="changeCount">count++</van-button>
-          <van-button type="primary" @click="changeCountAsync">count++(异步)</van-button>
-          <van-button type="primary" @click="changeProductId">productId--</van-button>
+          <van-button type="primary" @click="changeCount">
+            count++
+          </van-button>
+          <van-button type="primary" @click="changeCountAsync">
+            count++(异步)
+          </van-button>
+          <van-button type="primary" @click="changeProductId">
+            productId--
+          </van-button>
         </van-collapse-item>
       </client-only>
       <van-collapse-item title="异步请求request" name="3">
-        <van-button type="primary" @click="handleUserInfo">点我发请求</van-button>
-        <div class="area_box" v-if="userInfo.name">获取到数据，当前用户是：{{ userInfo.name }}</div>
+        <van-button type="primary" @click="handleUserInfo">
+          点我发请求
+        </van-button>
+        <div v-if="userInfo.name" class="area_box">
+          获取到数据，当前用户是：{{ userInfo.name }}
+        </div>
       </van-collapse-item>
     </van-collapse>
   </div>
@@ -39,14 +49,14 @@ onMounted(() => {
 });
 
 // 查询用户信息
-let userInfo = ref({} as IUser);
+const userInfo = ref({} as IUser);
 const handleUserInfo = async () => {
   let res: ResponseType<IUser>;
   Toast.loading('等待修改状态');
   try {
     res = await getUserInfo({
       channelType: '1',
-      saleCode: 'MY_*0mS5C7hu9MJgPKPi38bIBtqcIYuReeCK9sOtWGhThR6k!',
+      saleCode: 'MY_*0mS5C7hu9MJgPKPi38bIBtqcIYuReeCK9sOtWGhThR6k!'
     });
   } catch (error) {
     Toast.fail({ message: error.message });

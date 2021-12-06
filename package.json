@@ -4,10 +4,10 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "node .output/server/index.mjs",
-    "lint": "eslint .vue,.ts,.js --fix"
+    "lint": "eslint --format friendly --ext .ts,.js,.vue .",
+    "lint:fix": "eslint --format friendly --ext .ts,.js,.vue . --fix"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.16.3",
     "@nuxtjs/eslint-config-typescript": "^7.0.2",
     "eslint": "^8.3.0",
     "eslint-plugin-nuxt": "^3.1.0",
@@ -23,7 +23,10 @@
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/proxy": "^2.1.0",
     "@pinia/nuxt": "^0.1.5",
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
     "autoprefixer": "^10.4.0",
+    "eslint-formatter-friendly": "^7.0.0",
     "ohmyfetch": "^0.4.6",
     "pinia": "^2.0.3",
     "typescript": "^4.5.2",
@@ -31,7 +34,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-add": "lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {

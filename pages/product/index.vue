@@ -1,7 +1,9 @@
 <template>
   <div>
     产品详情
-    <van-button type="primary">主要按钮</van-button>
+    <van-button type="primary">
+      主要按钮
+    </van-button>
     <!-- {{ data }} -->
   </div>
 </template>

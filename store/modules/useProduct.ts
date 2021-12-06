@@ -6,13 +6,13 @@ export interface productStore {
 const productOptions = {
   id: 'product',
   state: (): productStore => ({
-    productId: '7190',
+    productId: '7190'
   }),
   actions: {
-    changeProductId(val) {
+    changeProductId (val) {
       this.productId = val;
-    },
-  },
+    }
+  }
 };
 
 export default defineStore(productOptions);
