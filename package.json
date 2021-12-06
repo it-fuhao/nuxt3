@@ -33,7 +33,7 @@
   },
   "lint-staged": {
     "*.{js,ts,vue}": [
-      "eslint . --ext .vue,.ts,.js",
+      "yarn run lint",
       "git add"
     ]
   }
