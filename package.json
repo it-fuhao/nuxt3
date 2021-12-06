@@ -11,12 +11,12 @@
     "@nuxtjs/eslint-config-typescript": "^7.0.2",
     "eslint": "^8.3.0",
     "eslint-plugin-nuxt": "^3.1.0",
+    "husky": "^7.0.4",
     "node-sass": "^6.0.1",
     "nuxt3": "latest",
     "postcss-pxtorem": "^6.0.0",
     "sass": "^1.43.4",
-    "sass-loader": "^12.3.0",
-    "simple-git-hooks": "^2.7.0"
+    "sass-loader": "^12.3.0"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
@@ -28,9 +28,7 @@
     "eslint-formatter-friendly": "^7.0.0",
     "ohmyfetch": "^0.4.6",
     "pinia": "^2.0.3",
+    "typescript": "^4.5.2",
     "vant": "^3.2.5"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "npm run lint:fix"
   }
 }
