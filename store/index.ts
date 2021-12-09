@@ -11,7 +11,7 @@ const Store = {
 };
 
 // 持久化存储
-const initStoreStorage = () => {
+const initStoreStorage = () :void => {
   const local = localStorage.getItem(storeLocalKey) ?? '{}';
   const l = JSON.parse(local);
   for (const key in Store) {
