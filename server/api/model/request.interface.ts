@@ -6,7 +6,7 @@ export interface RequestType {
   body?: any;
 }
 
-export interface ResponseType<T = any> {
+export interface ResponseType<T> {
   code: string;
   msg: string;
   data: T;

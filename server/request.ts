@@ -8,9 +8,9 @@ class MyFetch {
     }
   };
 
-  async fetch (options: RequestType) {
+  async fetch<T> (options: RequestType) {
     const { url, headers } = options;
-    let res: ResponseType;
+    let res: ResponseType<T>;
     try {
       res = await $fetch(url, {
         headers: headers || this.baseOptions.headers,
