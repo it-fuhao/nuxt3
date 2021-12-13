@@ -8,7 +8,7 @@ class MyFetch {
     }
   };
 
-  async fetch<T> (options: RequestType) {
+  async fetch<T> (options: RequestType): Promise<ResponseType<T>> {
     const { url, headers } = options;
     let res: ResponseType<T>;
     try {

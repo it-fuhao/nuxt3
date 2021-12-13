@@ -1,8 +1,8 @@
 import myFetch from '../request';
-import { IUserParams } from './model/common.interface';
+import { IUserParams, IUser } from './model/common.interface';
 
-export const getUserInfo = async <T>(params: IUserParams) => {
-  return await myFetch.fetch<T>({
+export const getUserInfo = async (params: IUserParams) => {
+  return await myFetch.fetch<IUser>({
     url: '/apigateway/api/user/getUserInfo',
     method: 'post',
     body: params

@@ -56,7 +56,7 @@ const handleUserInfo = async () => {
   try {
     res = await getUserInfo({
       channelType: '1',
-      saleCode: 'MY_*0mS5C7hu9MJgPKPi38bIBtqcIYuReeCK9sOtWGhThR6k!'
+      saleCode: 'MY_*0mS5C7hu9MJgPKPi38bIBtqcIYuReeCK9sOtWGhThR6k!',
     });
   } catch (error) {
     Toast.fail({ message: error.message });
