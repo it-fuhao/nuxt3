@@ -36,5 +36,7 @@ module.exports = {
     'no-useless-catch': [0], // 关闭catch检测
 
     'comma-dangle': [0], // 忽略尾随逗号
+
+    'vue/no-v-model-argument': [0], // v-model参数不报错
   }
 };

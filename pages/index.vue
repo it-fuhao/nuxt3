@@ -23,7 +23,7 @@
 const router = useRouter();
 
 const list = ref<IFunctional[]>([
-  { id: 1, title: '动态组件测试', componentName: 'parent-child-components' },
+  { id: 1, title: '动态组件测试', componentName: 'parent-child' },
 ]);
 
 const handleFunctional = (functional: IFunctional) => {
@@ -34,7 +34,7 @@ const handleFunctional = (functional: IFunctional) => {
     }
   });
 };
-  // 路由跳转
+// 路由跳转
 const handleRouter = () => {
   router.push({ name: 'test' });
 };

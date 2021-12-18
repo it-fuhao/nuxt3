@@ -9,7 +9,7 @@ const { componentName } = route.query;
 const functional = shallowRef();
 
 onBeforeMount(async () => {
-  const components = await import(`../../functional/${componentName}.vue`);
+  const components = await import(`../../functional/${componentName}/index.vue`);
   functional.value = components.default;
 });
 
