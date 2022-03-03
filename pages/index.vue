@@ -1,7 +1,7 @@
 <template>
   <div>
     <van-button type="primary" @click="handleRouter">
-      跳转测试页面
+      跳转测试页面1
     </van-button>
     <van-cell
       v-for="(functional, index) in list"
